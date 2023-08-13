@@ -10,20 +10,110 @@
 <body>
     <nav>
         <div id="title">Tic Tac Toe</div>
-        <button>New Game!</button>
+        <button id="draw-button">Call a draw</button>
+        <button id="new-game-button">New Game</button>
     </nav>
+
     <div id="divider-line"></div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times</span>
+            <form id="setup-form">
+                <div class="player-modal-container-parent">
+                    <!-- PLAYER 1 INPUT -->
+                    <div class="player-modal-container">
+                        <div class="label-input-container">
+                            <label for="player1-name-input">Player 1 Name: </label>
+                            <input type="text" id="player1-name-input" placeholder="Ticky" name="player1-name-input">
+                        </div>
+                        <div class="label-input-container">
+                            <label for="player1-symbol-input">Player 1 Symbol: </label>
+                            <input type="text" maxlength="2" id="player1-symbol-input" placeholder="X" name="player1-symbol-input">                        
+                        </div>
+                        <div class="label-input-container">
+                            <label for="color-selector1">Player 1 color:  </label>
+                            <select name="color-selector1" id="color-selector1">
+                                <option value=red>red</option>
+                                <option value=blue selected>blue</option>
+                                <option value=green>green</option>
+                                <option value=purple>purple</option>
+                                <option value=pink>pink</option>
+                                <option value=orange>orange</option>
+                                <option value=yellow>yellow</option>
+                                <option value=teal>teal</option>
+                                <option value=brown>brown</option>
+                                <option value=black>black</option>
+                            </select>                        
+                        </div>
+                    </div>
+
+                    <!-- PLAYER 2 INPUT -->
+                    <div class="player-modal-container">
+                        <div class="label-input-container">
+                            <label for="player2-name-input">Player 2 Name: </label>
+                            <input type="text" id="player2-name-input" placeholder="Tocky" name="player2-name-input">
+                        </div>
+                        <div class="label-input-container">
+                            <label for="player2-symbol-input">Player 2 Symbol: </label>
+                            <input type="text" maxlength="2" id="player2-symbol-input" placeholder="O" name="player2-symbol-input">                        
+                        </div>
+                        <div class="label-input-container">
+                            <label for="color-selector2">Player 2 color:  </label>
+                            <select name="color-selector2" id="color-selector2">
+                                <option value=red selected>red</option>
+                                <option value=blue>blue</option>
+                                <option value=green>green</option>
+                                <option value=purple>purple</option>
+                                <option value=pink>pink</option>
+                                <option value=orange>orange</option>
+                                <option value=yellow>yellow</option>
+                                <option value=teal>teal</option>
+                                <option value=brown>brown</option>
+                                <option value=black>black</option>
+                            </select>                        
+                        </div>
+                    </div>
+
+                </div>
+            
+
+                <div class="reset-submit-container">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Play</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="player-section">
+        <div id="player-1-section" class="player-subsection">
+            <div class="player1-name">Bill</div>
+            <div class="player1-symbol">Player Symbol: I</div>
+            <div class="player1-wins">Wins: 2</div>
+        </div>
+
+        <div id="draw-section" class="player-subsection">draws: 1</div>
+
+        <div id="player-2-section" class="player-subsection">
+            <div class="player2-name">Orion</div>
+            <div class="player2-symbol">Player Symbol: T</div>
+            <div class="player2-wins">Wins: 100</div>
+        </div>
+    </div>
+
     <div id="body-container">
         <div id="board-container">
-            <div class="board-tile" data-tile="1">X</div>
-            <div class="board-tile" data-tile="2">O</div>
-            <div class="board-tile" data-tile="3">X</div>
-            <div class="board-tile" data-tile="4">O</div>
-            <div class="board-tile" data-tile="5">X</div>
-            <div class="board-tile" data-tile="6">O</div>
-            <div class="board-tile" data-tile="7">X</div>
-            <div class="board-tile" data-tile="8">O</div>
-            <div class="board-tile" data-tile="9">X</div>
+            <div class="board-tile" data-tile="1"></div>
+            <div class="board-tile" data-tile="2"></div>
+            <div class="board-tile" data-tile="3"></div>
+            <div class="board-tile" data-tile="4"></div>
+            <div class="board-tile" data-tile="5"></div>
+            <div class="board-tile" data-tile="6"></div>
+            <div class="board-tile" data-tile="7"></div>
+            <div class="board-tile" data-tile="8"></div>
+            <div class="board-tile" data-tile="9"></div>
         </div>
     </div>
 </body>
